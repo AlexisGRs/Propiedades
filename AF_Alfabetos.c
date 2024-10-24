@@ -1,43 +1,41 @@
 #include <stdio.h>
+#include <string.h>
 
-void unionC(char a[], int tA, char u[], int tU);  
-void diferencia(char a[], int tA, char u[], int tU);      
-int encontrado(char a[], int tA, char u);         
+void unionC(char a[], char u[]);  
+void diferencia(char a[], char u[]);      
+int encontrado(char a[], char u);         
 
 int main(){
-    char A[]= {1, 3, 5, 7};  
-    char U[]= {1, 2, 3, 4, 5, 6, 7, 8};  
-    int tA = 4;  
-    int tU= 8;  
-
+    char A[]="12345";
+    char U[]="123789";  
     printf("Union de A y U: ");
-    unionC(A, tA, U, tU);  
+    unionC(A, U);  
     printf("\nDiferencia A - U:");
-    diferencia(A, tA, U, tU);      
+    diferencia(A, U);      
     return 0;
 }
-void unionC(char a[], int tA, char u[], int tU){
+void unionC(char a[], char u[]){
     int i;
-    for(i= 0; i< tA; i++){
-        printf("%i ", a[i]);
+    for(i= 0; i<strlen(a); i++){
+        printf("%c ", a[i]);
     }
-    for(i= 0; i< tU; i++){
-        if(!encontrado(a, tA, u[i])){  
-            printf("%i ", u[i]);
+    for(i= 0; i<strlen(u); i++){
+        if(!encontrado(a, u[i])){  
+            printf("%c ", u[i]);
         }
     }
 }
-void diferencia(char a[], int tA, char u[], int tU){
+void diferencia(char a[], char u[]){
     int i;
-    for(i= 0; i< tA; i++){
-        if(!encontrado(u, tU, a[i])){  
-            printf("%i ", a[i]);
+    for(i= 0; i<strlen(u); i++){
+        if(!encontrado(u, a[i])){  
+            printf("%c ", a[i]);
         }
     }
 }
-int encontrado(char a[], int tA, char u){
+int encontrado(char a[], char u){
     int i;
-    for(i= 0; i< tA; i++){
+    for(i= 0; i<strlen(a); i++){
         if(a[i]== u){
             return 1;  
         }
