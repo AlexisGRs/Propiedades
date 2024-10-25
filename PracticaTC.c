@@ -6,8 +6,8 @@ void complemento(char a[], char u[]);
 int encontrado(char a[], char u);
 
 int main(){
-	char A[]="1790";
-	char U[]="1234976";
+	char A[]="123456";
+	char U[]="123789";
 	printf("Interseccion\n");
 	interseccion(A,U);
 	printf("\nComplemento\n");
