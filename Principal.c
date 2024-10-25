@@ -9,10 +9,14 @@ int encontrado(char a[], char u);
 
 int main(){
 	int opcion;
-	char A[]="12345";
-    char U[]="123789";
-    printf("El conjunto A es:%s\n", A);
-    printf("El conjunto U es:%s", U);
+	char A[100];
+	char U[100];
+    printf("Ingresa el lenguaje A:");
+    scanf("%s", A);
+    printf("\nIngresa el lenguaje U:");
+    scanf("%s", U);
+    printf("\n\nEl lenguaje A es:%s", A);
+    printf("\nEl lenguaje U es:%s", U);
     do{
 		printf("\n\n1.-Union\n2.-Interseccion\n3.-Complemento\n4.-Diferencia\n0.-Salir");
         printf("\n\nElige una opcion:");
