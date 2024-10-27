@@ -28,7 +28,7 @@ int main(){
 			case 2:printf("\n\nLa interseccion de A y U es:");
 			interseccion(A,U);
 			break;
-			case 3:printf("\n\nEl complemento de A y U es:");
+			case 3:printf("\n\nEl complemento de A es:");
 			complemento(A,U);
 			break;
 			case 4:printf("\nLa diferencia de A y U es:");
