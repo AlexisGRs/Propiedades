@@ -30,6 +30,7 @@ int main(){
 			break;
 			case 3:printf("\n\nEl complemento de A es:");
 			complemento(A,U);
+		        printf("...");
 			break;
 			case 4:printf("\nLa diferencia de A y U es:");
 			diferencia(A,U);
